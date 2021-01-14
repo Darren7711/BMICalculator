@@ -3,9 +3,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-public class BasedTest {
-    WebDriver driver;
+public class BaseTest {
     public static final String URL = "https://healthunify.com/bmicalculator/";
+    WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
@@ -15,7 +15,7 @@ public class BasedTest {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown () {
+    public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
