@@ -3,8 +3,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BMICalculatorTest extends BasedTest{
-    //webdriver == браузер
-    //webelement == элемент на странице
 
     @Test
     public void starvationCategoryShouldBeShown(){
