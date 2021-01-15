@@ -16,6 +16,8 @@ public class BMICalculatorTest extends BaseTest {
         Assert.assertEquals(category, "Your category is Starvation");
         String index = driver.findElement(By.name("si")).getAttribute("value");
         Assert.assertEquals(index, "14.93");
+
+        driver.findElement(By.cssSelector("[data-qa='search-input']"));
     }
 
     @Test
@@ -57,22 +59,22 @@ public class BMICalculatorTest extends BaseTest {
         Assert.assertEquals(index, "35.83");
     }
 
-    @Test
-    public void chosePounds() {
-        driver.findElement(By.name("wg")).sendKeys("120");
-        Select weightSelect = new Select(driver.findElement(By.name("opt1")));
-        weightSelect.selectByVisibleText("pounds");
-    }
-
-    @Test
-    public void choseFeet() {
-        Select weightSelect = new Select(driver.findElement(By.name("opt2")));
-        weightSelect.selectByVisibleText("6'");
-    }
-
-    @Test
-    public void choseInches() {
-        Select weightSelect = new Select(driver.findElement(By.name("opt3")));
-        weightSelect.selectByVisibleText("2''");
-    }
+//    @Test
+//    public void chosePounds() {
+//        driver.findElement(By.name("wg")).sendKeys("120");
+//        Select weightSelect = new Select(driver.findElement(By.name("opt1")));
+//        weightSelect.selectByVisibleText("pounds");
+//    }
+//
+//    @Test
+//    public void choseFeet() {
+//        Select weightSelect = new Select(driver.findElement(By.name("opt2")));
+//        weightSelect.selectByVisibleText("6'");
+//    }
+//
+//    @Test
+//    public void choseInches() {
+//        Select weightSelect = new Select(driver.findElement(By.name("opt3")));
+//        weightSelect.selectByVisibleText("2''");
+//    }
 }
